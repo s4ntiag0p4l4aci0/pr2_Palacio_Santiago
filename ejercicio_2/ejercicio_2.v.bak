@@ -1,0 +1,9 @@
+//Descripción a nivel de compuertas de un circuito combinacional básico
+//Salida = (A & B) | C
+module Compuertas(iEntrada,oY);
+input [2:0] iEntrada;
+output oY;
+wire X;
+nand g1(X,iEntrada[0],iEntrada[1]);
+nor g2(oY,X,iEntrada[2]);
+endmodule

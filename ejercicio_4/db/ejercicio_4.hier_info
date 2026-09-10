@@ -1,0 +1,8 @@
+|ejercicio_4
+iA => b1.DATAIN
+iB => b2.DATAIN
+iSelector => b1.OE
+iSelector => b2.OE
+oSalida << oSalida.DB_MAX_OUTPUT_PORT_TYPE
+
+

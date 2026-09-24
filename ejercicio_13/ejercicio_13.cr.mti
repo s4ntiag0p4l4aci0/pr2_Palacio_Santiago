@@ -1,0 +1,11 @@
+C:/practica_2/pr2_Palacio_Santiago/ejercicio_13/ejercicio_13.v {1 {vlog -work work C:/practica_2/pr2_Palacio_Santiago/ejercicio_13/ejercicio_13.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ejercicio_13
+-- Compiling module my_alu_core
+-- Compiling module my_bin_to_bcd
+-- Compiling module my_deco_7seg
+
+Top level modules:
+	ejercicio_13
+
+} {} {}}

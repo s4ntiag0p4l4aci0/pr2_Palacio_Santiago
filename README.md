@@ -81,7 +81,7 @@ EL EJERCICIO 1 ESTÁ EN LA CARPETA DEL EJERCICIO 2 Y VICEVERSA
 </div>
 
 <div align="center">
-  <img src="./ejercicio_13/sim_13_FUNC_F_casos_1y2.pngg" alt="ejercicio_11_imagen" width="400">
+  <img src="./ejercicio_13/sim_13_FUNC_F_casos_1y2.png" alt="ejercicio_11_imagen" width="400">
 </div>
 <div align="center">
   <img src="./ejercicio_13/sim_13_FUNC_5_casos_3y4.png" alt="ejercicio_11_imagen" width="400">

@@ -95,10 +95,11 @@ EL EJERCICIO 1 ESTÁ EN LA CARPETA DEL EJERCICIO 2 Y VICEVERSA
 <div align="center">
   <img src="./ejercicio_13/sim_13_FUNC_B_casos_9y10.png" alt="ejercicio_11_imagen" width="400">
 </div>
+<div align="center">orex invertido</div>
 <div align="center">
   <img src="./ejercicio_13/sim_13_FUNC_B_casos_9y10_invertido.png" alt="ejercicio_11_imagen" width="400">
 </div>
-
+<div align="center"> orex normal</div>
 
 <div align="center" style="margin-top: 25px; margin-bottom: 25px;">
 

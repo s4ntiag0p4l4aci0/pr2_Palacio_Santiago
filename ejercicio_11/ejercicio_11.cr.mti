@@ -1,0 +1,11 @@
+C:/practica_2/pr2_Palacio_Santiago/ejercicio_11/ejercicio_11.v {1 {vlog -work work C:/practica_2/pr2_Palacio_Santiago/ejercicio_11/ejercicio_11.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ejercicio_11
+-- Compiling module mydeco_display7
+-- Compiling module mymux4to4
+-- Compiling module mydeco3to6
+
+Top level modules:
+	ejercicio_11
+
+} {} {}}

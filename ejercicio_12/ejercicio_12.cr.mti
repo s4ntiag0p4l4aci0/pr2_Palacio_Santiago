@@ -1,0 +1,12 @@
+ejercicio_12.v {1 {vlog -work work C:/practica_2/pr2_Palacio_Santiago/ejercicio_12/ejercicio_12.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ejercicio_12
+-- Compiling module my_decoder_4to16
+-- Compiling module my_demux_par
+-- Compiling module my_gray_converter
+-- Compiling module mydeco_display7
+
+Top level modules:
+	ejercicio_12
+
+} {} {}}

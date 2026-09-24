@@ -1,0 +1,100 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\practica_2\pr2_Palacio_Santiago\ejercicio_11
+vejercicio_12
+!i10b 1
+!s100 ?3;]3IUD;2:ea69Ql2<cc0
+I74?bK<e97K8^F3M@]TzNB0
+VJT>I5jYj3EKLICHJ`^P7_2
+Z1 dC:\practica_2\pr2_Palacio_Santiago\ejercicio_12
+Z2 w1790217066
+Z3 8C:/practica_2/pr2_Palacio_Santiago/ejercicio_12/ejercicio_12.v
+Z4 FC:/practica_2/pr2_Palacio_Santiago/ejercicio_12/ejercicio_12.v
+L0 4
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1790220010.445000
+Z7 !s107 C:/practica_2/pr2_Palacio_Santiago/ejercicio_12/ejercicio_12.v|
+Z8 !s90 -reportprogress|300|-work|work|C:/practica_2/pr2_Palacio_Santiago/ejercicio_12/ejercicio_12.v|
+!s101 -O0
+Z9 o-work work -O0
+vmy_decoder_4to16
+!i10b 1
+!s100 9`BKa[96eckU4DF3TgHkl0
+I[:B9eT4m1<jz481[X<^@Z1
+VEAkRR4H2]aVNgSc8QTNlL1
+R1
+R2
+R3
+R4
+L0 94
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vmy_demux_par
+!i10b 1
+!s100 8od5@i47^INP1I@oHbk793
+I5kXGV_RoBTMz7>9J0Z:?U0
+V22]5cMM0@Oj__H]Bf0`;m3
+R1
+R2
+R3
+R4
+L0 108
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vmy_gray_converter
+!i10b 1
+!s100 l1G4Po`lBTkd]DWbPl9d03
+Im>c;nS<44NA^?@dJ8MLjU0
+VW>F8doeYlPbN=60PkW1Zf3
+R1
+R2
+R3
+R4
+L0 120
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vmydeco_display7
+!i10b 1
+!s100 iCf?m_2E9=1J;NV[3fZnb2
+I>UNT<18^70?I;Z958W_P42
+VRR9K0JGRzHEV@h::=8?cO1
+R1
+R2
+R3
+R4
+L0 134
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9

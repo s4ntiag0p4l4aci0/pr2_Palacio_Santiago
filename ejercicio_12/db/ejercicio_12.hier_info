@@ -1,0 +1,239 @@
+|ejercicio_12
+iEntrada[0] => iEntrada[0].IN7
+iEntrada[1] => iEntrada[1].IN7
+iEntrada[2] => iEntrada[2].IN7
+iEntrada[3] => iEntrada[3].IN7
+oDisplay1[0] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[1] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[2] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[3] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[4] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[5] <= mydeco_display7:deco_disp1.Seg
+oDisplay1[6] <= mydeco_display7:deco_disp1.Seg
+oDisplay2[0] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[1] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[2] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[3] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[4] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[5] <= mydeco_display7:deco_disp2.Seg
+oDisplay2[6] <= mydeco_display7:deco_disp2.Seg
+oDisplay3[0] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[1] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[2] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[3] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[4] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[5] <= mydeco_display7:deco_disp3.Seg
+oDisplay3[6] <= mydeco_display7:deco_disp3.Seg
+oDisplay4[0] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[1] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[2] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[3] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[4] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[5] <= mydeco_display7:deco_disp4.Seg
+oDisplay4[6] <= mydeco_display7:deco_disp4.Seg
+oDisplay5[0] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[1] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[2] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[3] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[4] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[5] <= mydeco_display7:deco_disp5.Seg
+oDisplay5[6] <= mydeco_display7:deco_disp5.Seg
+oDisplay6[0] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[1] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[2] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[3] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[4] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[5] <= mydeco_display7:deco_disp6.Seg
+oDisplay6[6] <= mydeco_display7:deco_disp6.Seg
+oLEDs_Gray[0] <= my_gray_converter:IC_Gray.oGray
+oLEDs_Gray[1] <= my_gray_converter:IC_Gray.oGray
+oLEDs_Gray[2] <= my_gray_converter:IC_Gray.oGray
+oLEDs_Gray[3] <= my_gray_converter:IC_Gray.oGray
+
+
+|ejercicio_12|my_gray_converter:IC_Gray
+iBinario[0] => oGray.IN0
+iBinario[1] => oGray.IN0
+iBinario[1] => oGray.IN1
+iBinario[2] => oGray.IN0
+iBinario[2] => oGray.IN1
+iBinario[3] => oGray.IN1
+iBinario[3] => oGray[3].DATAIN
+oGray[0] <= oGray.DB_MAX_OUTPUT_PORT_TYPE
+oGray[1] <= oGray.DB_MAX_OUTPUT_PORT_TYPE
+oGray[2] <= oGray.DB_MAX_OUTPUT_PORT_TYPE
+oGray[3] <= iBinario[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_decoder_4to16:IC_Decoder
+iBin[0] => Decoder0.IN3
+iBin[1] => Decoder0.IN2
+iBin[2] => Decoder0.IN1
+iBin[3] => Decoder0.IN0
+oDeco[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[10] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[11] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[12] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[13] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[14] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+oDeco[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_demux_par:demux5
+iVal[0] => oDato.DATAB
+iVal[1] => oDato.DATAB
+iVal[2] => oDato.DATAB
+iVal[3] => oDato.DATAB
+sel1 => oDato.IN0
+sel2 => oDato.IN1
+oDato[0] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[1] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[2] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[3] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_demux_par:demux4
+iVal[0] => oDato.DATAB
+iVal[1] => oDato.DATAB
+iVal[2] => oDato.DATAB
+iVal[3] => oDato.DATAB
+sel1 => oDato.IN0
+sel2 => oDato.IN1
+oDato[0] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[1] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[2] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[3] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_demux_par:demux3
+iVal[0] => oDato.DATAB
+iVal[1] => oDato.DATAB
+iVal[2] => oDato.DATAB
+iVal[3] => oDato.DATAB
+sel1 => oDato.IN0
+sel2 => oDato.IN1
+oDato[0] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[1] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[2] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[3] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_demux_par:demux2
+iVal[0] => oDato.DATAB
+iVal[1] => oDato.DATAB
+iVal[2] => oDato.DATAB
+iVal[3] => oDato.DATAB
+sel1 => oDato.IN0
+sel2 => oDato.IN1
+oDato[0] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[1] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[2] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[3] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|my_demux_par:demux1
+iVal[0] => oDato.DATAB
+iVal[1] => oDato.DATAB
+iVal[2] => oDato.DATAB
+iVal[3] => oDato.DATAB
+sel1 => oDato.IN0
+sel2 => oDato.IN1
+oDato[0] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[1] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[2] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+oDato[3] <= oDato.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejercicio_12|mydeco_display7:deco_disp1
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+
+|ejercicio_12|mydeco_display7:deco_disp2
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+
+|ejercicio_12|mydeco_display7:deco_disp3
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+
+|ejercicio_12|mydeco_display7:deco_disp4
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+
+|ejercicio_12|mydeco_display7:deco_disp5
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+
+|ejercicio_12|mydeco_display7:deco_disp6
+Seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Decoder0.IN3
+A[1] => Decoder0.IN2
+A[2] => Decoder0.IN1
+A[3] => Decoder0.IN0
+
+

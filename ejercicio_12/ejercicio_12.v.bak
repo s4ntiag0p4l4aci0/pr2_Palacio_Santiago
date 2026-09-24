@@ -1,0 +1,99 @@
+// ==========================================
+// MACRO MÓDULO (Jerarquía Descendente)
+
+// ==========================================
+module Ejercicio12_Completo(
+    input [3:0] iEntrada,
+    output [6:0] oDisplay1,
+    output [6:0] oDisplay2,
+    output [6:0] oDisplay3,
+    output [6:0] oDisplay4,
+    output [6:0] oDisplay5,   // Display activo para ID 1-2 (Código Gray / Error)
+    output [6:0] oDisplay6,   // Display exclusivo para Error ('E')
+    output [3:0] oLEDs_Gray   // Salida para los LEDs en Código Gray
+);
+
+    wire wError;
+    wire [3:0] wGray;
+    wire [3:0] wDatoDisplay5;
+    wire [3:0] wConstanteE = 4'hE; // Valor hexadecimal para la letra 'E'
+
+    // 1. Detección de error (Entradas mayores a 9: desde 1010 hasta 1111)
+    assign wError = iEntrada[3] & (iEntrada[2] | iEntrada[1]);
+
+    // 2. Conversor de Binario a Código Gray (Modelado por flujo de datos)
+    assign wGray[3] = iEntrada[3];
+    assign wGray[2] = iEntrada[3] ^ iEntrada[2];
+    assign wGray[1] = iEntrada[2] ^ iEntrada[1];
+    assign wGray[0] = iEntrada[1] ^ iEntrada[0];
+
+    // Salida directa hacia los LEDs en código Gray
+    assign oLEDs_Gray = wGray;
+
+    // 3. Multiplexor para el Display 5 (ID 1-2): 
+    // Si wError es 1, muestra 'E'; si es 0, muestra el código Gray calculado.
+    mymux4to4 MUX_Disp5(wDatoDisplay5, wGray, wConstanteE, wError);
+
+    // 4. Instanciación de los Decodificadores de 7 Segmentos para cada Display
+    
+    // Displays 1 a 4 (Se envían apagados 4'hF para esta configuración, pero listos en los outputs para el Pin Planner)
+    mydeco_display7 IC_Deco1 (oDisplay1, 4'hF);
+    mydeco_display7 IC_Deco2 (oDisplay2, 4'hF);
+    mydeco_display7 IC_Deco3 (oDisplay3, 4'hF);
+    mydeco_display7 IC_Deco4 (oDisplay4, 4'hF);
+
+    // Display 5 (Muestra el Código Gray o la 'E' si hay error de rango)
+    mydeco_display7 IC_Deco5 (oDisplay5, wDatoDisplay5);
+
+    // Display 6 (Salida única para error: Muestra 'E' si wError=1, o se apaga si wError=0)
+    wire [3:0] wDatoErrorDisp6 = wError ? 4'hE : 4'hF;
+    mydeco_display7 IC_Deco6 (oDisplay6, wDatoErrorDisp6);
+
+endmodule
+
+
+// ==========================================
+// SUBMÓDULO: MULTIPLEXOR 4 a 4 (Flujo de datos)
+// Reutilizado de tus referencias de código
+// ==========================================
+module mymux4to4(Y, A, S);
+    input [3:0] A;
+    input S;
+    output [3:0] Y;
+    assign Y = S ? A : 4'b1111;
+endmodule
+
+// Versión extendida de 2 entradas para el MUX si se requiere selección entre Gray y 'E':
+module mymux4to4_error(Y, A, B, S);
+    input [3:0] A; // Entrada 0 (Gray)
+    input [3:0] B; // Entrada 1 ('E')
+    input S;       // Selector (Error)
+    output [3:0] Y;
+    assign Y = S ? B : A;
+endmodule
+
+
+// ==========================================
+// SUBMÓDULO: DECODIFICADOR binario a 7 seg. 
+// (Tomado directamente de tus códigos base de comportamiento)
+// ==========================================
+module mydeco_display7(Seg, A);
+    input [3:0] A;
+    output reg [6:0] Seg; // Seg[6]=a, Seg[5]=b, ... , Seg[1]=f, Seg[0]=g
+    
+    always @*
+    case (A) 
+        4'b0000 : Seg <= 7'b0000001; // 0
+        4'b0001 : Seg <= 7'b1111001; // 1
+        4'b0010 : Seg <= 7'b0100100; // 2
+        4'b0011 : Seg <= 7'b0110000; // 3
+        4'b0100 : Seg <= 7'b0011001; // 4
+        4'b0101 : Seg <= 7'b0020010; // 5 (ajustado al formato base)
+        4'b0110 : Seg <= 7'b0000010; // 6
+        4'b0111 : Seg <= 7'b1111000; // 7
+        4'b1000 : Seg <= 7'b0000000; // 8
+        4'b1001 : Seg <= 7'b0011000; // 9
+        4'b1110 : Seg <= 7'b0000110; // Letra 'E' (segmentos a, d, e, f, g encendidos)
+        default : Seg <= 7'b1111111; // Apaga el display (1111111)
+    endcase
+endmodule
